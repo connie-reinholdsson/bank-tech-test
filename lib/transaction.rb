@@ -1,5 +1,4 @@
 # Logs each transaction in specified format
-require 'date'
 
 class Transaction
 
@@ -16,5 +15,7 @@ class Transaction
   def log_withdrawal(date, amount, balance)
     self.log << {date: date, debit: amount, balance: balance}
   end
+
+  def 
 
 end
