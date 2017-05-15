@@ -12,14 +12,17 @@ class Statement
   def new_deposit(date, amount, balance)
     transaction = Transaction.new
     transaction.log_deposit(date, amount, balance)
-    @transactions << transaction.log
+    store_transaction
   end
 
   def new_withdrawal(date, amount, balance)
     transaction = Transaction.new
     transaction.log_withdrawal(date, amount, balance)
-    @transactions << transaction.log
+    store_transaction
   end
 
+  def store_transaction
+    @transactions << transaction.log
+  end
 
 end

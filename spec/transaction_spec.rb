@@ -9,14 +9,14 @@ describe Transaction do
     end
   end
 
-  describe "log_deposit" do
+  describe "#log_deposit" do
     it "so that I can log transactions, store the deposit in statement" do
       transaction.log_deposit("15/05/2017", 50, 50)
       expect(transaction.log).to eq [{date: "15/05/2017", credit: 50, balance: 50}]
     end
   end
 
-  describe "log_withdrawal" do
+  describe "#log_withdrawal" do
     it "so that I can log withdrawals, store the withdrawal in statement" do
       transaction.log_withdrawal("15/05/2017", 50, -50)
       expect(transaction.log).to eq [{date: "15/05/2017", debit: 50, balance: -50 }]

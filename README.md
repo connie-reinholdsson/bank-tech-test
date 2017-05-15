@@ -1,6 +1,6 @@
 # Welcome to the Bank Tech Test!
 
-Text
+Welcome to my Banking app! Struggling to keep control of your finances? This application allows you to deposit and withdraw money, view your balance and print a bank statement. It has an overdraft of £0 and so will make sure you don't end up in debt, and you can deposit an infinite amount of money. Welcome to great banking!
 
 ### Technologies:
 - Ruby (version 2.4.0)
@@ -18,17 +18,11 @@ Text
 2. Run ```git clone https://github.com/connie-reinholdsson/bank-tech-test.git```
 3. Run ```cd bank-tech-test```
 4. Open IRB/PRY
-5. Require the document
-6. Run it
+5. Run ```require './lib/account'```
+6. Run account_name = Account.new
+7. Call 'deposit', 'withdraw', 'balance' and 'statement' methods on account_name
 
-| **Objects** | **Initialize**    | **Messages**
-|-------------|-------------------|-----------------|
-|Bank Account |Balance            |                 |
-|             |                   |show_balance     |
-|             |                   |deposit          |
-|             |                   |withdraw         |
-|             |                   |print_statement ||
-
+Enjoy keeping control of your banking and stay out of debt!
 
 ### User Stories
 ```
