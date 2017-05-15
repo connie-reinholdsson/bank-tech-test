@@ -8,13 +8,6 @@ describe Transaction do
       expect(transaction.log).to eq []
     end
   end
-  #
-  # describe "log_date" do
-  #   it "so that I can log the time of my transactions, log the date it occurs" do
-  #     transaction.log_date
-  #     expect(transaction.log).to eq [{date: "15/05/2017"}]
-  #   end
-  # end
 
   describe "log_deposit" do
     it "so that I can log transactions, store the deposit in statement" do

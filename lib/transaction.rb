@@ -16,6 +16,4 @@ class Transaction
     self.log << {date: date, debit: amount, balance: balance}
   end
 
-  def 
-
 end

@@ -1,13 +1,16 @@
 # Track spend and allow for deposits, withdrawals and print statements
-require_relative 'transaction'
+require_relative 'statement'
 
 class Account
 
-  attr_reader :balance, :date
+  attr_reader :balance, :date, :statement
 
-  def initialize
-    @balance = 0
-    @date = "Default date"
+  MINIMUM_BALANCE = 0
+
+  def initialize(balance = MINIMUM_BALANCE)
+    @balance = balance
+    @date = "Default"
+    @statement = Statement.new
   end
 
   def deposit(amount)
@@ -18,12 +21,17 @@ class Account
   def withdraw(amount)
     fail "Insufficient funds: Please top up funds." if amount > @balance
     @balance -= amount
+    log_withdrawal(amount)
   end
 
   def log_deposit(amount)
-    transaction_log = TransactionLog.new
     current_date
-    transaction_log.new_deposit(self.date, amount, self.balance)
+    @statement.new_deposit(self.date, amount, self.balance)
+  end
+
+  def log_withdrawal(amount)
+    current_date
+    @statement.new_withdrawal(self.date, amount, self.balance)
   end
 
   private

@@ -1,4 +1,4 @@
-require './lib/bank_account'
+require './lib/account'
 account = Account.new
 account.deposit(50)
 account.withdraw(50)
