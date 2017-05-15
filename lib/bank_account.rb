@@ -1,9 +1,12 @@
+# Track spend and allow for deposits, withdrawals and print statements
+
 class Account
 
-  attr_reader :balance
+  attr_reader :balance, :statement
 
   def initialize
     @balance = 0
+    @statement = []
   end
 
   def deposit(amount)

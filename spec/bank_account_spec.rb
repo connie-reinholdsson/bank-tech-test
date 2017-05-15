@@ -7,7 +7,7 @@ describe Account do
     it "so that I can open a new account, initialize with 0 balance" do
       expect(account.balance).to eq 0
     end
-  end
+end
 
   describe "deposit" do
     it "so that I can make payments, I want to be able to deposit money into my bank account" do
@@ -22,7 +22,7 @@ describe Account do
     end
 
     it "so that I don't end up with a debt, I want to see an error message if there are insufficient funds" do
-        expect{account.withdraw(1)}.to raise_error "Insufficient funds: Please top up funds."
+        expect{account.withdraw(1)}.to raise_error('Insufficient funds: Please top up funds.')
     end
   end
 end
