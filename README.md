@@ -21,6 +21,37 @@ Text
 5. Require the document
 6. Run it
 
+| **Objects** | **Initialize**    | **Messages**
+|-------------|-------------------|-----------------|
+|Bank Account |Balance            |                 |
+|             |                   |show_balance     |
+|             |                   |deposit          |
+|             |                   |withdraw         |
+|             |                   |print_statement ||
+
+
+### User Stories
+```
+As an account user,
+So that I can keep track of my spendings,
+I want to see the balance available
+```
+```
+As an account user,
+So that I can make payments,
+I want to be able to deposit money into my account
+```
+```
+As an account user,
+So that I can make payments
+I want to withdraw money from the account
+```
+```
+As an account user,
+So that I keep track of my spendings,
+I want to be able to print a bank statement showing the date, credits, debits and balance
+```
+
 ## Specification
 
 ### Requirements
