@@ -2,10 +2,11 @@
 
 class Account
 
-  attr_reader :balance, :statement
+  attr_reader :balance
 
   def initialize
     @balance = 0
+    @date = "Default date"
     @statement = []
   end
 
@@ -14,13 +15,14 @@ class Account
   end
 
   def withdraw(amount)
-    if @balance >= amount
-      @balance -= amount
-    else
-      raise "Insufficient funds: Please top up funds."
-    end
+    fail "Insufficient funds: Please top up funds." if amount > @balance
+    @balance -= amount
   end
 
-  
+  private
+
+  def current_date
+    @date = Time.now.strftime("%d/%m/%y")
+  end
 
 end

@@ -1,19 +1,20 @@
-# Logs each transactio in the correct format
+# Logs each transaction in specified format
+require 'date'
 
 class Transaction
 
-  attr_reader :statement
+  attr_reader :log
 
   def initialize
-    @statement = []
+    @log = []
   end
 
-  def log_deposit(amount, balance)
-    @statement << {credit: amount, balance: balance}
+  def log_deposit(date, amount, balance)
+    self.log << {date: date, credit: amount, balance: balance}
   end
 
-  def log_withdrawal(amount, balance)
-    @statement << {debit: amount, balance: balance}
+  def log_withdrawal(date, amount, balance)
+    self.log << {date: date, debit: amount, balance: balance}
   end
 
 end
