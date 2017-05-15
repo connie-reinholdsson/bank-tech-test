@@ -11,8 +11,15 @@ describe Transaction do
 
   describe "log_deposit" do
     it "so that I can log transactions, store the deposit in statement" do
-      transaction.log_deposit(50)
-      expect(transaction.statement).to eq [{credit: 50}]
+      transaction.log_deposit(50, 50)
+      expect(transaction.statement).to eq [{credit: 50, balance: 50}]
+    end
+  end
+
+  describe "log_withdrawal" do
+    it "so that I can log withdrawals, store the withdrawal in statement" do
+      transaction.log_withdrawal(50, -50)
+      expect(transaction.statement).to eq [{debit: 50, balance: -50 }]
     end
   end
 end

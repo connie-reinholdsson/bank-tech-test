@@ -8,9 +8,12 @@ class Transaction
     @statement = []
   end
 
-  def log_deposit(amount)
-    @statement << {credit: amount}
+  def log_deposit(amount, balance)
+    @statement << {credit: amount, balance: balance}
   end
 
+  def log_withdrawal(amount, balance)
+    @statement << {debit: amount, balance: balance}
+  end
 
 end
