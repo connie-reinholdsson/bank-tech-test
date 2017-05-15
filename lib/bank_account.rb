@@ -6,4 +6,16 @@ class Account
     @balance = 0
   end
 
+  def deposit(amount)
+    @balance += amount
+  end
+
+  def withdraw(amount)
+    if @balance >= amount
+      @balance -= amount
+    else
+      raise "Insufficient funds: Please top up funds."
+    end
+  end
+
 end

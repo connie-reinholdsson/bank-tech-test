@@ -48,6 +48,11 @@ I want to withdraw money from the account
 ```
 ```
 As an account user,
+So that I don't end up with a debt,
+I don't want to be able to withdraw money beyond 0 balance.
+```
+```
+As an account user,
 So that I keep track of my spendings,
 I want to be able to print a bank statement showing the date, credits, debits and balance
 ```
